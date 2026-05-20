@@ -6,10 +6,37 @@ It plays short clicks through an output device and records them through an input
 
 ## Install
 
+### Option 1: Install in a virtual environment
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -e .
+```
+
+Run it from the virtual environment:
+
+```powershell
+.\.venv\Scripts\ada.exe -l
+```
+
+Or activate the virtual environment first:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+ada -l
+```
+
+### Option 2: Install globally
+
+```powershell
+python -m pip install .
+```
+
+Then run it directly:
+
+```powershell
+ada -l
 ```
 
 ## Usage
@@ -17,25 +44,25 @@ python -m venv .venv
 List WASAPI devices:
 
 ```powershell
-audio-delay -l
+ada -l
 ```
 
 List all devices:
 
 ```powershell
-audio-delay -l -a
+ada -l -a
 ```
 
 Measure with explicit devices:
 
 ```powershell
-audio-delay -i 20 -o 18
+ada -i 20 -o 18
 ```
 
 Change volume:
 
 ```powershell
-audio-delay -i 20 -o 18 -v 0.7
+ada -i 20 -o 18 -v 0.7
 ```
 
 ## Notes
