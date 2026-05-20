@@ -11,13 +11,13 @@ It plays short clicks through an output device and records them through an input
 #### Using `pipx`:
 
 ```powershell
-pipx install git+https://github.com/YOUR-USER/audio-delay-assistant.git
+pipx install git+https://github.com/Danmyrer/ada.git
 ```
 
 #### Using `uv`:
 
 ```powershell
-uv tool install git+https://github.com/YOUR-USER/audio-delay-assistant.git
+uv tool install git+https://github.com/Danmyrer/ada.git
 ```
 
 Then run:
@@ -29,7 +29,7 @@ ada -l
 Or run once without installing permanently:
 
 ```powershell
-uvx --from git+https://github.com/YOUR-USER/audio-delay-assistant.git ada -l
+uvx --from git+https://github.com/Danmyrer/ada.git ada -l
 ```
 
 ### Development install
@@ -37,7 +37,7 @@ uvx --from git+https://github.com/YOUR-USER/audio-delay-assistant.git ada -l
 Clone the repository:
 
 ```powershell
-git clone https://github.com/YOUR-USER/audio-delay-assistant.git
+git clone https://github.com/Danmyrer/ada.git
 cd audio-delay-assistant
 ```
 
