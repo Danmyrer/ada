@@ -6,15 +6,55 @@ It plays short clicks through an output device and records them through an input
 
 ## Install
 
-### Option 1: Install in a virtual environment
+### Quick install
+
+#### Using `pipx`:
+
+```powershell
+pipx install git+https://github.com/YOUR-USER/audio-delay-assistant.git
+```
+
+#### Using `uv`:
+
+```powershell
+uv tool install git+https://github.com/YOUR-USER/audio-delay-assistant.git
+```
+
+Then run:
+
+```powershell
+ada -l
+```
+
+Or run once without installing permanently:
+
+```powershell
+uvx --from git+https://github.com/YOUR-USER/audio-delay-assistant.git ada -l
+```
+
+### Development install
+
+Clone the repository:
+
+```powershell
+git clone https://github.com/YOUR-USER/audio-delay-assistant.git
+cd audio-delay-assistant
+```
+
+Create a virtual environment:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install -e .
 ```
 
-Run it from the virtual environment:
+Install the package in editable mode:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+```
+
+Run the CLI:
 
 ```powershell
 .\.venv\Scripts\ada.exe -l
@@ -27,16 +67,10 @@ Or activate the virtual environment first:
 ada -l
 ```
 
-### Option 2: Install globally
+Run tests:
 
 ```powershell
-python -m pip install .
-```
-
-Then run it directly:
-
-```powershell
-ada -l
+pytest
 ```
 
 ## Usage
