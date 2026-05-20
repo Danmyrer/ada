@@ -6,6 +6,7 @@ on:
 
 jobs:
   test:
+    name: Test on Windows
     runs-on: windows-latest
 
     steps:
@@ -17,13 +18,12 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install package
+      - name: Install package with dev dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e .
-          python -m pip install pytest
+          python -m pip install -e ".[dev]"
 
-      - name: Check CLI help
+      - name: Check CLI entrypoint
         run: |
           ada --help
 
