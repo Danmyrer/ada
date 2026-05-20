@@ -40,7 +40,7 @@ Clone the repository:
 
 ```powershell
 git clone https://github.com/Danmyrer/ada.git
-cd audio-delay-assistant
+cd ada
 ```
 
 Create a virtual environment:
