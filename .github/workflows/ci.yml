@@ -25,7 +25,7 @@ jobs:
 
       - name: Check CLI help
         run: |
-          audio-delay --help
+          ada --help
 
       - name: Run tests
         run: |
