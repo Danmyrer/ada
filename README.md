@@ -1,5 +1,7 @@
 # Audio Delay Assistant
 
+[![CI](https://github.com/Danmyrer/ada/actions/workflows/ci.yml/badge.svg)](https://github.com/Danmyrer/ada/actions/workflows/ci.yml)
+
 Small CLI tool to roughly measure Bluetooth speaker audio delay using a microphone.
 
 It plays short clicks through an output device and records them through an input device. The detected delay is printed in milliseconds.
